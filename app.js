@@ -10,7 +10,7 @@ function minFunktion() {
     }
     if(banan === 1)
     {
-        document.getElementById("demo").innerHTML = banan + ' Banan';  
+    document.getElementById("demo").innerHTML = banan + ' Banan';  
     }
     else {
     document.getElementById("demo").innerHTML = banan + ' Bananer';}
@@ -18,6 +18,7 @@ function minFunktion() {
 
 let monkeycost = 10
 let monkey = 0
+let amountofmonkeys = 0
 
 
 function BuyMonkey() {
@@ -26,8 +27,10 @@ function BuyMonkey() {
         havemonkey = true 
         numberofmonkeys++
         monkeycost *= 2
+        amountofmonkeys = numberofmonkeys
         document.getElementById("demo").innerHTML = banan + ' Bananer';
-        document.getElementById("abe pris").innerHTML = 'Price of monkey: ' + monkeycost;
+        document.getElementById("abe pris").innerHTML = 'Amount of bananas for the next monkey upgrade: ' + monkeycost;
+        document.getElementById("antalaber").innerHTML = 'You currently have so many monkeys: ' + amountofmonkeys 
     }else{
         alert('You are running low on bananas, get more to and upgrade me again.')
     }
@@ -36,18 +39,27 @@ function BuyMonkey() {
 let Farmercost = 80
 let bananIsekundet = 0
 let havefarmer = false
+let numbreoffarmers = 0
+let amountoffarmers = 0
 
 function bananFarmer() {
     if(banan >= Farmercost) {
-    banan = banan - Farmercost;
-    bananIsekundet += 1
-    havefarmer = true
-    Farmercost *= 2
-    }else}
+        banan = banan - Farmercost;
+        bananIsekundet += 1
+        havefarmer = true
+        numbreoffarmers++ 
+        amountoffarmers = numbreoffarmers
+        Farmercost *= 2
+        document.getElementById("demo").innerHTML = banan + ' Bananer';
+        document.getElementById("Farmer Pris").innerHTML = 'Amount of bananas for the next Farmer upgrade: ' + Farmercost;
+        document.getElementById("antalfarmer").innerHTML = 'You currently have so many farmers: ' + amountoffarmers;
+    }else{
         alert('You are low on banana, I am not going to work for free')
+    }
 }
 
 setInterval(function(){
     banan += bananIsekundet
     document.getElementById("demo").innerHTML = banan + ' Bananer';
 }, 1000)
+

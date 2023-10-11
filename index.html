@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <p style="background-image: url('Banantræer.jpg');"> 
+    <style>
+    h1 {
+    width:500px;
+    margin: 0 auto;
+    background: greenyellow;
+    text-align: center;
+}
+
+    h3 {
+    width:500px;
+    margin: 0 auto;
+    background: pink;
+    text-align: center;
+}
+    </style>
+    <h1>The Banana factory</h1>
+    <h3>Start the game by pressing the banana, and get upgrades that make your banan production higher. Have fun!</h3>
+    <script src="app.js"></script>
+
+  </head>
+  <body style="background-color: azure;">
+    
+    <img src="Bananpicture.png" height="500px" width="500px" onclick="minFunktion()">
+    <img src="monkeypng.webp" height="350px" width="300px" onclick="BuyMonkey()">
+    <img src="Farmer.png" height="400" width="450" onclick="bananFarmer()">
+
+
+    <p id="demo">Klik på bananen for at tjene flere bananer.</p>
+    <p id="abe pris">Get a <strong>Monkey Upgrade.</strong> Offer starts at 10 bananes</p>
+    <p id="antalaber"></p>
+    <p id="Farmer Pris"> Get a <strong>Farmer and recieve bananas every second.</strong> Offer starts at 80 bananas</p>
+    <p id="antalfarmer"></p>
+
+
     <style>
         p {
+            font-size: medium;
+            width: 600px;
+            margin: 0 auto;
+            background: yellow;
             text-align: center;
+            font-weight: 700;
+
         }
     </style>
-    <h1>Banana clicker</h1>
-    <script src="app.js"></script>
-  </head>
-  <body style="background-color:greenyellow">
-    <p id="demo">Klik på bananen for at tjene flere bananer.</p>
-    <img src="Bananpicture.png" height="256px" width="127px" onclick="minFunktion()">
-    <img src="monkeypng.webp" height="141px" width="127px" onclick="BuyMonkey()">
-    <p id="abe pris">Get a <strong>Monkey Upgrade.</strong> Offer starts at 10 bananers</p>
-
-    <img src="Farmer.webp" height="800" width="911" onclick="bananFarmer()">
   </body>
 </html>
