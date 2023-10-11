@@ -33,13 +33,18 @@ function BuyMonkey() {
     }
 }
 
-let Samler = 80
+let Farmercost = 80
 let bananIsekundet = 0
+let havefarmer = false
 
-function bananSamler() {
-    if(banan >= Samler)
-    banan = banan - Samler;
-    bananIsekundet 
+function bananFarmer() {
+    if(banan >= Farmercost) {
+    banan = banan - Farmercost;
+    bananIsekundet += 1
+    havefarmer = true
+    Farmercost *= 2
+    }else}
+        alert('You are low on banana, I am not going to work for free')
 }
 
 setInterval(function(){
