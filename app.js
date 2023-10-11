@@ -25,6 +25,24 @@ function BuyMonkey() {
         banan = banan - monkeycost
         havemonkey = true 
         numberofmonkeys++
+        monkeycost *= 2
         document.getElementById("demo").innerHTML = banan + ' Bananer';
+        document.getElementById("abe pris").innerHTML = 'Price of monkey: ' + monkeycost;
+    }else{
+        alert('You are running low on bananas, get more to and upgrade me again.')
     }
 }
+
+let Samler = 80
+let bananIsekundet = 0
+
+function bananSamler() {
+    if(banan >= Samler)
+    banan = banan - Samler;
+    bananIsekundet 
+}
+
+setInterval(function(){
+    banan += bananIsekundet
+    document.getElementById("demo").innerHTML = banan + ' Bananer';
+}, 1000)
