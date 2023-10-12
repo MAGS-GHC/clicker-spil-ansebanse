@@ -61,6 +61,7 @@ function bananFarmer() {
 
 setInterval(function(){
     banan += bananIsekundet
+    banan1 += bananIsekundet
     document.getElementById("demo").innerHTML = banan + ' Bananer';
 }, 1000)
 
@@ -69,8 +70,9 @@ let banan1 = 0
 
 function minFunktion2() {
     banan1 += 1;
-    if (BuyMonkey) {
+    if (BuyMonkey && bananFarmer) {
         banan1 += amountofmonkeys;
+        banan1 += amountoffarmers;
     }
 }
 
@@ -78,6 +80,6 @@ let highs = 0
 
 function highscore() {
     highs = banan1 
-    document.getElementById("highscore").innerHTML = 'Total amount of bananas every collected:' + highs;
+    document.getElementById("highscore").innerHTML = 'Total amount of bananas ever collected:' + highs;
 }
 
