@@ -18,13 +18,13 @@
 }
     </style>
     <h1>The Banana factory</h1>
-    <h3>Start the game by pressing the banana, and get upgrades that make your banan production higher. Have fun!</h3>
+    <h3>Start the game by pressing the banana, and get upgrades that make your banana production higher. Have fun!</h3>
     <script src="app.js"></script>
 
   </head>
   <body style="background-color: azure;">
     
-    <img src="Bananpicture.png" height="500px" width="500px" onclick="minFunktion()">
+    <img src="Bananpicture.png" height="500px" width="500px" onclick="minFunktion() + minFunktion2() + highscore()">
     <img src="monkeypng.webp" height="350px" width="300px" onclick="BuyMonkey()">
     <img src="Farmer.png" height="400" width="450" onclick="bananFarmer()">
 
@@ -34,6 +34,8 @@
     <p id="antalaber"></p>
     <p id="Farmer Pris"> Get a <strong>Farmer and recieve bananas every second.</strong> Offer starts at 80 bananas</p>
     <p id="antalfarmer"></p>
+    <p id="highscore"></p>
+
 
 
     <style>

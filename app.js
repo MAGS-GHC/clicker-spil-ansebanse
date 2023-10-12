@@ -1,6 +1,7 @@
 let banan = 0;
 let havemonkey = false;
-let numberofmonkeys = 0
+let numberofmonkeys = 0;
+let amontofbananas = 0
 
 function minFunktion() {
     banan += 1
@@ -16,9 +17,9 @@ function minFunktion() {
     document.getElementById("demo").innerHTML = banan + ' Bananer';}
 }
 
-let monkeycost = 10
-let monkey = 0
-let amountofmonkeys = 0
+let monkeycost = 10;
+let monkey = 0;
+let amountofmonkeys = 0;
 
 
 function BuyMonkey() {
@@ -62,4 +63,21 @@ setInterval(function(){
     banan += bananIsekundet
     document.getElementById("demo").innerHTML = banan + ' Bananer';
 }, 1000)
+
+
+let banan1 = 0
+
+function minFunktion2() {
+    banan1 += 1;
+    if (BuyMonkey) {
+        banan1 += amountofmonkeys;
+    }
+}
+
+let highs = 0
+
+function highscore() {
+    highs = banan1 
+    document.getElementById("highscore").innerHTML = 'Total amount of bananas every collected:' + highs;
+}
 
