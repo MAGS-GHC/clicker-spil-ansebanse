@@ -29,7 +29,16 @@ function BuyMonkey() {
         numberofmonkeys++
         monkeycost *= 2
         amountofmonkeys = numberofmonkeys
-        document.getElementById("demo").innerHTML = banan + ' Bananer';
+        if(banan ===1) {
+            document.getElementById("demo").innerHTML = banan + ' Banan';
+            }
+            else {
+                document.getElementById("demo").innerHTML = banan + ' Bananer';
+            }
+        
+        if (amountofmonkeys === 1) {
+            
+        }
         document.getElementById("abe pris").innerHTML = 'Amount of bananas for the next monkey upgrade: ' + monkeycost;
         document.getElementById("antalaber").innerHTML = 'You currently have so many monkeys: ' + amountofmonkeys 
     }else{
@@ -60,9 +69,20 @@ function bananFarmer() {
 }
 
 setInterval(function(){
-    banan += bananIsekundet
-    banan1 += bananIsekundet
-    document.getElementById("demo").innerHTML = banan + ' Bananer';
+    if (havefarmer) {
+    banan += bananIsekundet;
+    banan1 += bananIsekundet;
+    if(banan ===1) {
+    document.getElementById("demo").innerHTML = banan + ' Banan';
+    }
+    else {
+        document.getElementById("demo").innerHTML = banan + ' Bananer';
+    }
+
+
+
+
+    }
 }, 1000)
 
 
@@ -81,5 +101,6 @@ let highs = 0
 function highscore() {
     highs = banan1 
     document.getElementById("highscore").innerHTML = 'Total amount of bananas ever collected:' + highs;
+    
 }
 
